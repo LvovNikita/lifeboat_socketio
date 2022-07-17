@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lifeboat</title>
+    </head>
+    <body>
+        <div id="boat"> 
+            <div id="bow">BOW</div>
+            <div id="lady">LADY</div>
+            <div id="snob">SNOB</div>
+            <div id="captain">CAPTAIN</div>
+            <div id="mate">MATE</div>
+            <div id="frenchy">FRENCHY</div>
+            <div id="kid">KID</div>
+            <div id="stern">STERN</div>
+        </div>
+        <!-- SOCKET IO -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+            socket.on('updateState', state => {
+                console.log(state)
+            })
+        </script>
+    </body>
+</html>
